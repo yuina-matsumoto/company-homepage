@@ -1,0 +1,422 @@
+body {
+    width: 100%;
+    /*ページ全体の幅は100%と指定する*/
+    text-align: center;
+    /*ページ全体を中央揃えにする*/
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    scroll-margin-top: 100px; /* 上下に100pxのスクロール範囲を設定 */
+    padding: 75px 0;
+  }
+
+/* ヘッダー */
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(30, 30, 80, .3);
+    left: 0;
+    /* line-height: 1; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* ヘッダーの画像と文字を中央にする */
+.inline-block_header {
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.inline-block_header p a {
+    padding-top: 100px;
+    margin-top:-100px;
+}
+
+/* ヘッダーの中のテキスト */
+.header-a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity.3s;
+    margin: 0px 15px;
+}
+
+a:hover {
+    opacity: .5;
+    color: orange;
+}
+
+/* バナーの画像 */
+.banner {
+    margin-top: 50px;
+    position: relative;
+}
+
+.banner img {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* バナーの中のテキスト */
+.title {
+    color: white;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ボーダー */
+section {
+    border-bottom: 1px solid #ddd;
+}
+
+/* タイトル */
+span {
+    background: #ff4e02;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* 推奨サービス*/
+.inline-block_businessconten {
+    width: 80%;
+    margin: 16px auto;
+    display: flex;
+}
+
+.businesscontent-text img {
+    width: 300px;
+    height: 150px;
+    margin: 0;
+}
+
+.businesscontent-text p {
+    padding: 10px 20px;
+    /* margin: 5px 10px; */
+    text-align: justify;
+}
+
+/* お役立ち情報 */
+.information-carousel {
+    width: 80%;
+    margin: 16px auto;
+}
+
+.information-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.information-ul {
+    display: flex;
+    transition: transform .3s;
+    padding-left: 0;
+}
+
+li.information-li {
+    margin: 10px 10px;
+    display: inline-block;
+}
+
+.date {
+    margin: 0px 150px 0px 0px;
+    background: #ccc;
+    color: white;
+    text-align: left;
+}
+
+.year {
+    font-size: 4px;
+    padding-left: 8px;
+}
+
+.day {
+    font-size: 32px;
+    padding-left: 16px;
+}
+
+.information_title {
+    padding: 10px 10px;
+    background: linear-gradient(gray 0%,
+            gray 90%,
+            #ccc 90%,
+            #ccc 100%);         
+}
+
+.information_content {
+    padding: 10px 10px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+
+/* スナップ */
+.snap-carousel {
+    width: 80%;
+    margin: 16px auto;
+}
+
+.snap-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.snap-ul {
+    list-style: none;
+    display: flex;
+    transition: transform .3s;
+    gap: 50px;  /* 余白 */
+    padding-left: 0;
+}
+
+.snap-li {
+    height: 100%;
+    margin-top: 20px;
+}
+
+.snap-li img {
+    width: 300px;
+    height: 150px;
+}
+
+.hidden {
+    display: none;
+}
+
+nav {
+    margin-top: 16px;
+    text-align: center;
+}
+
+nav button+button {
+    margin-left: 8px;
+}
+
+nav button {
+    border: none;
+    width: 16px;
+    height: 16px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+nav .current {
+    background: #999;
+}
+
+/* ポートフォリオ */
+
+.container{
+    width: 80%;
+    margin: 16px auto;
+} 
+
+
+.container button{
+    margin: 10px 10px;
+    padding: 10px 60px;
+} 
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 8887;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 1s ease-in-out;
+  }
+  
+  #modal-container #img {
+    background: #f1f1f1;
+    margin-bottom: 15px;
+  }
+  
+  #modal-container p {
+    margin-bottom: 10px;
+  }
+  
+  #modal-container p:last-child {
+    margin-bottom: 0;
+  }
+  
+  #modal-content {
+    background: #FFF;
+    overflow-y: auto;
+    padding: 20px 25px;
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 400px;
+    animation: show 0.6s linear 0s;
+    filter: drop-shadow(0px 2px 6px #777);
+  }
+  
+  #modal-top {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  
+  #modal-close {
+    background: #999;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0 8px;
+  }
+  
+  #modal-close:hover,
+  #modal-close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #modal-title {
+    color: #FFF;
+  }
+  
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+/* 主要メンバー */
+.inline-block_member {
+    display: inline-block;
+    /* インラインブロック要素にする */
+    padding: 30px;
+    /* 余白指定 */
+    width: 200px;
+    /* 高さ指定 */
+    margin: 20px 0px;
+    padding: 0px;
+    vertical-align: top;
+}
+
+.inline-block_member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* 会社情報 */
+
+table {
+    max-width: 27%;
+    margin: 0 auto 20px;
+    width: 27%;
+    /*ページ全体の幅は100%と指定する*/
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+td {
+    display: table-cell;
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid grey;
+}
+
+.a {
+    text-align: right;
+}
+
+/* お問い合わせ */
+
+.inquiry {
+    width: 50%;
+    margin: 16px auto;
+    text-align: left;
+}
+
+.residence {
+    display: flex;
+}
+
+.residence address {
+    margin: 20px 20px;
+}
+
+.residence address a {
+    text-align: center;
+    margin: 0 auto;
+}
+
+a[href^='mailto']::before {
+    content: '📧 ';
+}
+
+a[href^='tel']::before {
+    content: '📞 ';
+}
+
+/*
+  ページ内のリンクをクリックしたときに、スムーズなスクロールアニメーションが追加されます
+  ただし、このCSSは一部のブラウザでのみサポートされているため、すべてのブラウザで動作するわけではありません
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.footer-left {
+    width: 30%;
+    position: absolute;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-right {
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+}
+
+.footer-a {
+    text-align: right;
+}
